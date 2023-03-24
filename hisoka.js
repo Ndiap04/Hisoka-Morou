@@ -1,6 +1,6 @@
 /**
-   * Create By Dika Ardnt.
-   * Contact Me on wa.me/6288292024190
+   * Create By sendi.
+   * Contact Me on wa.me/6285894832504
    * Follow https://github.com/DikaArdnt
 */
 
@@ -2079,7 +2079,6 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
 		m.reply(`Berhasil menghapus '${text}' dari list pesan`)
             }
 	    break
-            }
             case 'public': {
                 if (!isCreator) throw mess.owner
                 hisoka.public = true
