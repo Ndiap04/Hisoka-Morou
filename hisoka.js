@@ -22,6 +22,7 @@ const yts = require('yt-search');
 const { yta, ytv, ytvd, ytvf, servers } = require('./lib/y2mate')
 const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./lib/myfunc')
+const nyoutube = ('© Bottycustore\nYoutube/Sc :\nhttps://www.youtube.com/channel/UCUAdKiNCnt6mpGD94okTaoQ/')
 
 // read database
 let tebaklagu = db.data.game.tebaklagu = []
