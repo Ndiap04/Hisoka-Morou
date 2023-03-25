@@ -19,7 +19,6 @@ const speed = require('performance-now')
 const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const yts = require('yt-search');
-const xfar = require('xfarr-api')
 const zenz = require('zenzapis.xyz')
 const { yta, ytv, ytvd, ytvf, servers } = require('./lib/y2mate')
 const primbon = new Primbon()
