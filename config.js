@@ -18,22 +18,6 @@ global.APIs = {
 zenz: 'https://zenzapis.xyz',
 }
 
-//—————「 Website Apikey 」—————//
-global.APIKeys = {
-//gausah di apa² in, udah free apikey :)
-'https://zenzapis.xyz': 'bagasganz',
-}
-
-// Website Api
-global.APIs = {
-	alfa: 'https://api.zeeoneofc.xyz', //apabila link api eror, segera laporkan ke owner
-}
-
-// Free apikey
-global.APIKeys = {
-	'https://api.zeeoneofc.xyz': 'V12',  // login https://api.zeeoneofc.xyz to get apikey || https://api-alphabot.herokuapp.com
-}
-
 // Website Api
 global.APIs = {
 	zenz: 'https://api.zahwazein.xyz',
