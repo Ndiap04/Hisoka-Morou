@@ -7,6 +7,33 @@
 const fs = require('fs')
 const chalk = require('chalk')
 
+// Free Apikey
+global.APIs = {
+	riy: 'https://api-xriy04.herokuapp.com',
+}
+
+//—————「 Website Apikey 」—————//
+global.APIs = {
+//gausah di apa² in!
+zenz: 'https://zenzapis.xyz',
+}
+
+//—————「 Website Apikey 」—————//
+global.APIKeys = {
+//gausah di apa² in, udah free apikey :)
+'https://zenzapis.xyz': 'bagasganz',
+}
+
+// Website Api
+global.APIs = {
+	alfa: 'https://api.zeeoneofc.xyz', //apabila link api eror, segera laporkan ke owner
+}
+
+// Free apikey
+global.APIKeys = {
+	'https://api.zeeoneofc.xyz': 'V12',  // login https://api.zeeoneofc.xyz to get apikey || https://api-alphabot.herokuapp.com
+}
+
 // Website Api
 global.APIs = {
 	zenz: 'https://api.zahwazein.xyz',
