@@ -1511,6 +1511,7 @@ case 'menfes': case 'menfess': {
             await hisoka.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
             await hisoka.sendButtonText(m.chat, buttons, akhji, nyoutube, m, {mentions: ments})
+            }
             break
 	    case 'yts': case 'ytsearch': {
                 if (!text) throw `Example : ${prefix + command} story wa anime`
