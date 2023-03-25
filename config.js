@@ -19,6 +19,7 @@ global.APIKeys = {
 
 // Other
 global.owner = ['6285894831504']
+global.pro = ['6285894831504']
 global.premium = ['6285894831504']
 global.packname = 'BottyCu Store'
 global.author = 'WhatsApp Bot'
@@ -26,6 +27,7 @@ global.sessionName = 'hisoka'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
+    pro: 'Fitur ini khusus pengguna premium',
     success: '✓ Success',
     admin: 'Fitur Khusus Admin Group!',
     botAdmin: 'Bot Harus Menjadi Admin Terlebih Dahulu!',
