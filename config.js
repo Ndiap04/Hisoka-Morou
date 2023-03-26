@@ -1,7 +1,7 @@
 /**
-   * Create By Dika Ardnt.
-   * Contact Me on wa.me/6288292024190
-   * Follow https://github.com/DikaArdnt
+   * Create By SendiAp.
+   * Contact Me on wa.me/6285894831504
+   * Follow https://github.com/SendiAp
 */
 
 const fs = require('fs')
@@ -30,7 +30,7 @@ global.APIKeys = {
 
 // Other
 global.owner = ['6285894831504']
-global.ownernomer = ['6285894831504']
+global.ownernomer = ['6285313937918','6285894831504']
 global.pro = ['6285894831504']
 global.premium = ['6285894831504']
 global.packname = 'BottyCu-Store'
