@@ -1522,7 +1522,7 @@ case 'menfes': case 'menfess': {
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `Pesan Dari : ${m2} \nUntuk : @${mq1.split('@')[0]}\n\n${m3}`
-            await hisoka.sendText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m)
+            await hisoka.sendText(m1 + '@s.whatsapp.net', pjtxt, kawk, m)
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
             await hisoka.sendText(m.chat, akhji, nyoutube, m)
             }
