@@ -7,6 +7,11 @@
 const fs = require('fs')
 const chalk = require('chalk')
 
+// Api
+global.APIs = {
+	alfa: 'https://api.zeeoneofc.my.id',
+}
+
 // Free Apikey
 global.APIs = {
 	riy: 'https://api-xriy04.herokuapp.com',
@@ -32,7 +37,7 @@ global.APIKeys = {
 global.owner = ['6285894831504']
 global.ownernomer = ['6285313937918','6285894831504']
 global.pro = ['6285894831504']
-global.premium = ['6285894831504']
+global.premium = ['6288290977739']
 global.packname = 'BottyCu-Store'
 global.author = 'WhatsApp Bot'
 global.sessionName = 'hisoka'
