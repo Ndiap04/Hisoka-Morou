@@ -1564,9 +1564,9 @@ case 'menfes': case 'menfess': {
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `*From:* ${m2} \n*To:* @${mq1.split('@')[0]}\n\n${m3}`
-            await hisoka.sendText(m1 + '@s.whatsapp.net', pjtxt, kawk, m)
+            await hisoka.sendText(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
-            await hisoka.sendText(m.chat, akhji, nyoutube, m)
+            await hisoka.sendText(m.chat, akhji, nyoutube, m, {mentions: ments})
             }
             break
              case 'tiktoknowm': {
