@@ -1563,8 +1563,8 @@ case 'menfes': case 'menfess': {
                 }
                 break
             case 'ytmp10': {
-                if (!text) throw (`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`
-                if (!isUrl(args[0])) throw `Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`
+                if (!text) throw (`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`)
+                if (!isUrl(args[0])) throw (`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`)
                 if (!args[0].includes('youtu.be') && !args[0].includes('youtube.com')) return reply(`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`)
                 reply(mess.wait)
                 let res = await fetch(global.api('alfa', '/api/downloader/youtube-audio', {
