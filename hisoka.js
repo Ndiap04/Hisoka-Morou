@@ -552,8 +552,6 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
                 case 'assalamualaikum': case 'hai': case 'hi': case 'halo': case 'bot': case 'q': case 'w': case 'e': case 'r': case 't': case 'y': case 'u': case 'i': case 'o': case 'a': case 's': case 'd': case 'f': case 'g': case 'h': case 'j': case 'k': case 'l': case 'z': case 'x': case 'c': case 'v': case 'b': case 'n': case 'm': {
                 if (m.isGroup) throw ('Fitur tidak dapat digunakan di grup')
-                m.reply('WhatsApp membatasi agar tidak terjadinya spam terhadap pesan yang dikirim, WhatsApp versi sekarang tombol sudah tidak keliatan di versi terbaru, ada sebagian module yang tidak menggunakan tombol\n\njika kamu ingin mendownload WhatsApp GB , yang mendukung tombol, dan tidak menghapus WhatsApp utama , kami menyediakan nya , tinggal ketik *whatsapp*\n\njika kalian masih melihat tombol, berarti whatsapp kalian versi lama, dan belum update.')
-                m.reply('senang bertemu dengan kamu!!! jika bot mengalami crash atau mati bisa langsung buru buru lapor owner ya, agar bisa terus diaktifkan😇')
                 hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/b806d93f2dc72157c9874.jpg' }, caption: `⭔ Mohon gunakan bot dengan bijak \n⭔ Bot akan terus berjalan jika didonasikan\n\n⛔WARNING⛔\n\nBot ini berjalan dengan server yang berbayar\nMohon donasikan beberapapun duit yang kamu punya, agar bot ini tetap berjalan dengan baik\n\nSelengkapnya : \n\n⭔ Ketik : *menu* , untuk melihat fungsi bot\n⭔ Ketik : *premium* , untuk menjadi pengguna premium\n⭔ Ketik : *donasi* , untuk melakukan donasi\n⭔ Ketik : *owner* , untuk menghubungi owner bot\n⭔ Ketik : *version* , untuk melihat versi bot dan kebijakan privasi` }, { quoted: m })
                 }
             break
@@ -1424,6 +1422,7 @@ break
             }
             break
 	        case 'tomp4': case 'tovideo': {
+	            if (!isPro) throw mess.pro
                 if (!/webp/.test(mime)) throw `Reply stiker dengan caption *${prefix + command}*`
                 m.reply(mess.wait)
 		        let { webp2mp4File } = require('./lib/uploader')
@@ -1434,6 +1433,7 @@ break
             }
             break
             case 'toaud': case 'toaudio': {
+            if (!isPro) throw mess.pro
             if (!/video/.test(mime) && !/audio/.test(mime)) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan Audio Dengan Caption ${prefix + command}`
             m.reply(mess.wait)
             let media = await hisoka.downloadMediaMessage(qmsg)
@@ -1443,6 +1443,7 @@ break
             }
             break
             case 'tomp3': {
+            if (!isPro) throw mess.pro
             if (!/video/.test(mime) && !/audio/.test(mime)) throw `Kirim/Reply Video/Audio Yang Ingin Dijadikan MP3 Dengan Caption ${prefix + command}`
             m.reply(mess.wait)
             let media = await hisoka.downloadMediaMessage(qmsg)
@@ -1452,6 +1453,8 @@ break
             }
             break
             case 'tovn': case 'toptt': {
+            if (!isPremium && global.db.data.users[m.sender].limit < 2) return m.reply(mess.endLimit) // respon ketika limit habis
+		    db.data.users[m.sender].limit -= 2 // -2 limit
             if (!/video/.test(mime) && !/audio/.test(mime)) throw `Reply Video/Audio Yang Ingin Dijadikan VN Dengan Caption ${prefix + command}`
             m.reply(mess.wait)
             let media = await hisoka.downloadMediaMessage(qmsg)
@@ -1461,6 +1464,8 @@ break
             }
             break
             case 'togif': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 2) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 2 // -2 limit
                 if (!/webp/.test(mime)) throw `Reply stiker dengan caption *${prefix + command}*`
                 m.reply(mess.wait)
 		        let { webp2mp4File } = require('./lib/uploader')
@@ -1471,6 +1476,8 @@ break
             }
             break
 	        case 'tourl': {
+	            if (!isPremium && global.db.data.users[m.sender].limit < 2) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 2 // -2 limit
                 m.reply(mess.wait)
 		let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
                 let media = await hisoka.downloadAndSaveMediaMessage(qmsg)
@@ -1485,6 +1492,8 @@ break
             }
             break
             case 'imagenobg': case 'removebg': case 'remove-bg': {
+            if (!isPremium && global.db.data.users[m.sender].limit < 2) return m.reply(mess.endLimit) // respon ketika limit habis
+		    db.data.users[m.sender].limit -= 2 // -2 limit
 	    if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 	    if (/webp/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
 	    let remobg = require('remove.bg')
@@ -1509,6 +1518,8 @@ break
 	    }
 	    break
 case 'menfes': case 'menfess': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 5) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 5 // -5 limit
 		        if (m.isGroup) throw ('Fitur tidak dapat digunakan di grup')
             	if (!text) throw `Example : ${prefix + command} 628xxxxxx|nama samaran|pesan`
             var mon = args.join(' ')
@@ -1517,17 +1528,17 @@ case 'menfes': case 'menfess': {
             var m3 = mon.split("|")[2]
                let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: 'Lokasimu', jpegThumbnail: thumb}}}
                let mq1 = m1 + '@s.whatsapp.net'
-               let kawk = ('MENFESS BY BOTTYCU BOT')
                let ownernya = ownernomer + '@s.whatsapp.net'
                let me = m.sender
                let ments = [mq1, ownernya, me]
-               let pjtxt = `Pesan Dari : ${m2} \nUntuk : @${mq1.split('@')[0]}\n\n${m3}`
+               let pjtxt = `*From:* ${m2} \n*To:* @${mq1.split('@')[0]}\n\n${m3}\n\n🤖*MENFESS BY BOTTYCU BOT* 🤖`
             await hisoka.sendText(m1 + '@s.whatsapp.net', pjtxt, kawk, m)
-            let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
+            let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}\n\n Berkurang -5 limit`
             await hisoka.sendText(m.chat, akhji, nyoutube, m)
             }
             break
              case 'tiktoknowm': {
+                if (!isPro) throw mess.pro
                 if (!text) throw 'Masukkan Query Link!'
 			kueri = args.join(" ")
                 m.reply(`Mohon tunggu, Bot sedang memproses link video...`)
@@ -1537,6 +1548,8 @@ case 'menfes': case 'menfess': {
                 hisoka.sendMessage(m.chat, { video: {url : anuh.link} }, { quoted: m })
             }
 	    case 'yts': case 'ytsearch': {
+	            if (!isPremium && global.db.data.users[m.sender].limit < 2) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 2 // -2 limit
                 if (!text) throw `Example : ${prefix + command} story wa anime`
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -1549,6 +1562,8 @@ case 'menfes': case 'menfess': {
             }
             break
         case 'google': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 3) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 3 // -3 limit
                 if (!text) throw `Example : ${prefix + command} fatih arridho`
                 let google = require('google-it')
                 google({'query': text}).then(res => {
@@ -1566,7 +1581,7 @@ case 'menfes': case 'menfess': {
                 if (!text) throw (`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`)
                 if (!isUrl(args[0])) throw (`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`)
                 if (!args[0].includes('youtu.be') && !args[0].includes('youtube.com')) return reply(`Kirim perintah:\n${prefix+command} link youtube\n\nContoh penggunaan:\n${prefix+command} https://youtu.be/kwop2Eg5QY4`)
-                reply(mess.wait)
+                m.reply(mess.wait)
                 let res = await fetch(global.api('alfa', '/api/downloader/youtube-audio', {
                     url: args[0]
                 }, 'apikey'))
@@ -1693,6 +1708,8 @@ case 'menfes': case 'menfess': {
             }
             break
             case 'pinterest': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
                 m.reply(mess.wait)
 		let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
@@ -1701,6 +1718,8 @@ case 'menfes': case 'menfess': {
             }
             break
 	    case 'couple': {
+	            if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
                 m.reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                 let random = anu[Math.floor(Math.random() * anu.length)]
@@ -1709,6 +1728,8 @@ case 'menfes': case 'menfess': {
             }
 	    break
             case 'coffe': case 'kopi': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
             let buttons = [
                     {buttonId: `coffe`, buttonText: {displayText: 'Next Image'}, type: 1}
                 ]
@@ -1723,6 +1744,8 @@ case 'menfes': case 'menfess': {
             }
             break
             case 'wikimedia': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
                 if (!text) throw 'Masukkan Query Title'
 		let { wikimedia } = require('./lib/scraper')
                 anu = await wikimedia(text)
@@ -1741,6 +1764,8 @@ case 'menfes': case 'menfess': {
             }
             break
             case 'quotesanime': case 'quoteanime': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
 		let { quotesAnime } = require('./lib/scraper')
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
@@ -1757,6 +1782,8 @@ case 'menfes': case 'menfess': {
             }
             break
 	        case 'motivasi': case 'dilanquote': case 'bucinquote': case 'katasenja': case 'puisi': {
+	            if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
                 let anu = await fetchJson(api('zenz', '/api/'+command, {}, 'apikey'))
                 let buttons = [
                     {buttonId: `motivasi`, buttonText: {displayText: 'Next'}, type: 1}
@@ -1771,6 +1798,8 @@ case 'menfes': case 'menfess': {
             }
             break
 	    case 'nomerhoki': case 'nomorhoki': {
+	            if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
                 if (!Number(text)) throw `Example : ${prefix + command} 6285894831504`
                 let anu = await primbon.nomer_hoki(Number(text))
                 if (anu.status == false) return m.reply(anu.message)
@@ -1778,6 +1807,8 @@ case 'menfes': case 'menfess': {
             }
             break
             case 'artimimpi': case 'tafsirmimpi': {
+                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 1 // -1 limit
                 if (!text) throw `Example : ${prefix + command} belanja`
                 let anu = await primbon.tafsir_mimpi(text)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2433,17 +2464,20 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 ┌──⭓ *Downloader Menu*  
 │
 │⭔ ${prefix}song [query] 🌟 
-│⭔ ${prefix}yts [query] 🌟
 │⭔ ${prefix}ytmp3 [url] 🌟
 │⭔ ${prefix}ytmp4 [url] 🌟
 │⭔ ${prefix}getmusic [query] 🌟
 │⭔ ${prefix}getvideo [query] 🌟
 │⭔ ${prefix}tiktoknowm [query] 🌟
+│⭔ ${prefix}tomp3 🌟
+│⭔ ${prefix}tomp4 🌟
+│⭔ ${prefix}toaudio 🌟
 │
 └───────⭓ 
 
 ┌──⭓ *Search Menu*
 │
+│⭔ ${prefix}yts [query] 
 │⭔ ${prefix}google [query]
 │⭔ ${prefix}gimage [query]
 │⭔ ${prefix}pinterest [query]
@@ -2513,12 +2547,9 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}stickerwm
 │⭔ ${prefix}emojimix
 │⭔ ${prefix}emojimix2
-│⭔ ${prefix}tovideo
 │⭔ ${prefix}togif
 │⭔ ${prefix}tourl
 │⭔ ${prefix}tovn
-│⭔ ${prefix}tomp3
-│⭔ ${prefix}toaudio
 │⭔ ${prefix}ebinary
 │⭔ ${prefix}dbinary
 │⭔ ${prefix}styletext
