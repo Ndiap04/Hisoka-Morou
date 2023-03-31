@@ -583,8 +583,7 @@ Note : Jika Kamu Mendapatkan Item Yang Sama, Kamu Menang!!!
 Contoh : 🔔 : 🔔 : 🔔`
         var but = [{buttonId: `${command}`, buttonText: { displayText: "Kembali Slot" }, type: 1 }]
 hisoka.sendMessage(m.chat, { text: slotnya, buttons: but, footer: "© Slot By Bottycu-Bot", templateButtons: but }, {quoted: m})
-           }
-           break
+    break
             case 'delttc': case 'delttt': {
             if (!m.isGroup) throw mess.group
             let roomnya = Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))
