@@ -1338,7 +1338,7 @@ break
                 for (let i of anu) {
                     await sleep(1500)
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      hisoka.sendMessage(m.chat, i, txt)
+                      hisoka.sendText(i, txt)
                     }
                 m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
             }
@@ -1370,7 +1370,7 @@ break
 		for (let yoi of anu) {
 		    await sleep(1500)
                       let txt = `「 Broadcast Bot 」\n\n${text}`
-                      hisoka.sendMessage(m.chat, yoi, txt)
+                      hisoka.sendText(yoi, txt)
 		}
 		m.reply('Sukses Broadcast')
             }
@@ -1657,9 +1657,9 @@ case 'menfes': case 'menfess': {
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `Pesan Dari : ${m2} \nUntuk : @${mq1.split('@')[0]}\n\n${m3}`
-            await hisoka.sendMessage(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
+            await hisoka.sendText(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
-            await hisoka.sendMessage(m.chat, akhji, nyoutube, m, {mentions: ments})
+            await hisoka.sendText(akhji, nyoutube, m, {mentions: ments})
             }
             break
 	    case 'yts': case 'ytsearch': {
