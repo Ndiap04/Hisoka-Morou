@@ -1657,9 +1657,9 @@ case 'menfes': case 'menfess': {
                let me = m.sender
                let ments = [mq1, ownernya, me]
                let pjtxt = `Pesan Dari : ${m2} \nUntuk : @${mq1.split('@')[0]}\n\n${m3}`
-            await hisoka.sendText(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
+            await hisoka.sendMessage(m1 + '@s.whatsapp.net', pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
-            await hisoka.sendText(akhji, nyoutube, m, {mentions: ments})
+            await hisoka.sendMessage(akhji, nyoutube, m, {mentions: ments})
             }
             break
 	    case 'yts': case 'ytsearch': {
@@ -2648,7 +2648,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 └───────⭓`
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        hisoka.sendMessage(m.chat, anu, hisoka.user.name)
+                        hisoka.sendTextanu)
                         } else if (setbot.templateGif) {
                         hisoka.send5Gif(m.chat, anu, hisoka.user.name, global.visoka, global.thumb)
                         } else if (setbot.templateVid) {
