@@ -2648,7 +2648,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 └───────⭓`
                          let setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        hisoka.sendTextanu)
+                        hisoka.sendText(anu)
                         } else if (setbot.templateGif) {
                         hisoka.send5Gif(m.chat, anu, hisoka.user.name, global.visoka, global.thumb)
                         } else if (setbot.templateVid) {
