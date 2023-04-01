@@ -2481,7 +2481,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 }
             }
             break
-            case 123456': {
+            case '23456': {
                 anu = `┌──⭓ *Premium Group Bot*
 │
 │⭔ ${prefix}linkgroup 🌟
