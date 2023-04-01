@@ -642,11 +642,11 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 m.reply('https://www.mediafire.com/folder/9459c211qoafo/WhatsAppGB\n\nPw : *botty321*')
             }
             break
-            case 'menu': {
+            case 'menu788': {
                 m.reply('💀 Pilih Menu:\n*menu1* - menggunakan tombol & gambar\n*menu2* - hanya teks saja.')
             }
             break
-            case 'menu2': {
+            case 'menu': {
                 m.reply('https://telegra.ph/List-Perintah-BottyCu-Bot-03-27\n\nKita Menggunakan Link Aja Ya - Soalnya Mau Buat Lagi Ribet')
             }
             break
@@ -2481,7 +2481,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 }
             }
             break
-            case 'menu1': {
+            case 123456': {
                 anu = `┌──⭓ *Premium Group Bot*
 │
 │⭔ ${prefix}linkgroup 🌟
