@@ -639,8 +639,8 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
             case 'menu': {
-                m.reply('┌──⭓ *Search Menu*\n│\n│⭔ google [query]\n│⭔ gimage [query]\n│⭔ pinterest [query]\n│⭔ #wikimedia [query]\n│⭔ #ringtone [query]\n│⭔ #coffe\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n')
-                m.reply('┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ ${prefix}togif\n│⭔ ${prefix}tourl\n│⭔ ${prefix}tovn\n│⭔ ${prefix}ebinary\n│⭔ ${prefix}dbinary\n│⭔ ${prefix}styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ ${prefix}setcmd\n│⭔ ${prefix}listcmd\n│⭔ ${prefix}getmsg\n│⭔ ${prefix}delmsg\n│\n└───────⭓')
+                m.reply('┌──⭓ *Search Menu*\n│\n│⭔ google [query]\n│⭔ gimage [query]\n│⭔ pinterest [query]\n│⭔ wikimedia [query]\n│⭔ ringtone [query]\n│⭔ coffe\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ togif\n│⭔ tourl\n│⭔ tovn\n│⭔ ebinary\n│⭔ dbinary\n│⭔ styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ setcmd\n│⭔ listcmd\n│⭔ delcmd\n│⭔ lockcmd\n│⭔ addmsg\n│⭔ listmsg\n│⭔ getmsg\n│⭔ delmsg\n│\n└───────⭓')
+                m.reply('')
             }
             break 
                         case 'spesial': {
@@ -1684,6 +1684,20 @@ case 'menfes': case 'menfess': {
                 teks += `⭔ *Title* : ${g.title}\n`
                 teks += `⭔ *Description* : ${g.snippet}\n`
                 teks += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
+                } 
+                m.reply(teks)
+                })
+                }
+                break
+        case 'ask':{
+                if (!isPremium && global.db.data.users[m.sender].limit < 3) return m.reply(mess.endLimit) // respon ketika limit habis
+		        db.data.users[m.sender].limit -= 3 // -3 limit
+                if (!text) throw `Example : ${prefix + command} fatih arridho`
+                let google = require('google-it')
+                google({'query': text}).then(res => {
+                let teks = `${text}\n\n`
+                for (let g of res) {
+                teks += `${g.snippet}\n`
                 } 
                 m.reply(teks)
                 })
