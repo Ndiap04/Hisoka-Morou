@@ -631,20 +631,24 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
                 case 'assalamualaikum': case 'hai': case 'hi': case 'halo': case 'bot': case 'q': case 'w': case 'e': case 'r': case 't': case 'y': case 'u': case 'i': case 'o': case 'a': case 's': case 'd': case 'f': case 'g': case 'h': case 'j': case 'k': case 'l': case 'z': case 'x': case 'c': case 'v': case 'b': case 'n': case 'm': {
                 if (m.isGroup) throw ('Fitur tidak dapat digunakan di grup')
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/5e4c217b662e77fc9360d.jpg'}, caption: `⭔ Mohon gunakan bot dengan bijak \n⭔ Bot akan terus berjalan jika didonasikan\n\n⛔WARNING⛔\n\nBot ini berjalan dengan server yang berbayar\nMohon donasikan beberapapun duit yang kamu punya, agar bot ini tetap berjalan dengan baik\n\nSelengkapnya : \n\n⭔ Ketik : *menu* , untuk melihat fungsi bot\n⭔ Ketik : *premium* , untuk menjadi pengguna premium\n⭔ Ketik : *donasi* , untuk melakukan donasi\n⭔ Ketik : *owner* , untuk menghubungi owner bot\n⭔ Ketik : *version* , untuk melihat versi bot dan kebijakan privasi` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/5e4c217b662e77fc9360d.jpg'}, caption: `⭔ Ketik : *menu* , untuk melihat fungsi bot\n⭔ Ketik : *premium* , untuk menjadi pengguna premium\n⭔ Ketik : *donasi* , untuk melakukan donasi\n⭔ Ketik : *owner* , untuk menghubungi owner bot\n⭔ Ketik : *spesial* , untuk membeli command atau perintah - tidak termasuk premium \n⭔ Ketik : *version* , untuk melihat versi bot dan kebijakan privasi` }, { quoted: m })
                 }
+            break
+            case 'spesial': {
+                m.reply('┌──⭓ *Voice Changer*\n│\n│⭔ bass\n│⭔ blown\n│⭔ deep\n│⭔ earrape\n│⭔ fast\n│⭔ fat\n│⭔ nightcore\n│⭔ reverse\n│⭔ robot\n│⭔ slow\n│⭔ tupai\n│\n└───────⭓\n\n💰Rp.1.000/bulan\n\njika kamu ingin membeli perintah ini, bisa langsung hubungi*owner*')
+            }
             break
             case 'version': {
                 m.reply('Bot Version : *v25.03.23*\n\nBot tidak dikelola oleh WhatsApp\n\nSelain bot kami sendiri, tidak ada bot lain atau pengembang BOT pihak ketiga yang berafiliasi dengan whatsaap.Mereka sepenuhnya independen dari kita.Mereka harus meminta Izin Team sebelum mengakses data Anda , Baru tersedia untuk mereka.')
             }
             break
             case 'menu': {
-                m.reply('┌──⭓ *Search Menu*\n│\n│⭔ google [query]\n│⭔ gimage [query]\n│⭔ pinterest [query]\n│⭔ wikimedia [query]\n│⭔ ringtone [query]\n│⭔ coffe\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ togif\n│⭔ tourl\n│⭔ tovn\n│⭔ ebinary\n│⭔ dbinary\n│⭔ styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ setcmd\n│⭔ listcmd\n│⭔ delcmd\n│⭔ lockcmd\n│⭔ addmsg\n│⭔ listmsg\n│⭔ getmsg\n│⭔ delmsg\n│\n└───────⭓')
+                m.reply('┌──⭓ *Search Menu*\n│\n│⭔ gimage [query]\n│⭔ pinterest [query]\n│⭔ wikimedia [query]\n│⭔ ringtone [query]\n│\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ coffe\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ togif\n│⭔ tourl\n│⭔ tovn\n│⭔ ebinary\n│⭔ dbinary\n│⭔ styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ addmsg\n│⭔ listmsg\n│⭔ getmsg\n│⭔ delmsg\n│\n└───────⭓')
                 m.reply('')
             }
-            break 
-                        case 'spesial': {
-                m.reply('Bot Version : *v25.03.23*\n\nBot tidak dikelola oleh WhatsApp\n\nSelain bot kami sendiri, tidak ada bot lain atau pengembang BOT pihak ketiga yang berafiliasi dengan whatsaap.Mereka sepenuhnya independen dari kita.Mereka harus meminta Izin Team sebelum mengakses data Anda , Baru tersedia untuk mereka.')
+            break
+         case 'me': {
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/3c1cbd98ef4b72b597949.mp4 }, caption: `*Premium Groups Bot:*\n🌟 Akses fitur groups\n🌟 Bisa masukan tiga groups sekaligus\n🌟 Bermain game bersama teman\n🌟 Akses semua fitur digroups\n\n💰 *Harga* : Rp.10.000/bulan\n\n🎁 Anti limit\n🎁 Bot tidak delay\n\nHappy Shopping!` }, { quoted: m })
             }
             break
             case 'chat': {
@@ -2239,50 +2243,6 @@ case 'menfes': case 'menfess': {
                 m.reply(e)
                 }
                 break
-            case 'setcmd': {
-                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-		        db.data.users[m.sender].limit -= 1 // -1 limit
-                if (!m.quoted) throw 'Reply Pesan!'
-                if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
-                if (!text) throw `Untuk Command Apa?`
-                let hash = m.quoted.fileSha256.toString('base64')
-                if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) throw 'You have no permission to change this sticker command'
-                global.db.data.sticker[hash] = {
-                    text,
-                    mentionedJid: m.mentionedJid,
-                    creator: m.sender,
-                    at: + new Date,
-                    locked: false,
-                }
-                m.reply(`Done!`)
-            }
-            break
-            case 'delcmd': {
-                let hash = m.quoted.fileSha256.toString('base64')
-                if (!hash) throw `Tidak ada hash`
-                if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) throw 'You have no permission to delete this sticker command'              
-                delete global.db.data.sticker[hash]
-                m.reply(`Done!`)
-            }
-            break
-            case 'listcmd': {
-                let teks = `
-Sedang Dalam Perbaikan.
-${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} : ${value.text}`).join('\n')}
-`.trim()
-                hisoka.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
-            }
-            break
-            case 'lockcmd': {
-                if (!isCreator) throw mess.owner
-                if (!m.quoted) throw 'Reply Pesan!'
-                if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
-                let hash = m.quoted.fileSha256.toString('base64')
-                if (!(hash in global.db.data.sticker)) throw 'Hash not found in database'
-                global.db.data.sticker[hash].locked = !/^un/i.test(command)
-                m.reply('Done!')
-            }
-            break
             case 'addmsg': {
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
 		        db.data.users[m.sender].limit -= 1 // -1 limit
