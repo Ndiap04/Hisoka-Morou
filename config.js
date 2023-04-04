@@ -38,7 +38,8 @@ global.owner = ['6285894831504']
 global.ownernomer = ['6285313937918','6285894831504']
 global.pro = ['6285894831504']
 global.premium = ['6285894831504']
-global.packname = 'BottyCu-Store'
+global.voice = ['6285894831504']
+global.packname = 'BottyCu-Bot'
 global.author = 'WhatsApp Bot'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
@@ -49,6 +50,7 @@ global.mess = {
     admin: 'Fitur Khusus Admin Group!',
     botAdmin: 'Bot Harus Menjadi Admin Terlebih Dahulu!',
     owner: 'Fitur Khusus Owner Bot',
+    voice: 'Kamu belum membeli fitur ini!'
     group: 'Fitur Digunakan Hanya Untuk Group!',
     private: 'Fitur Digunakan Hanya Untuk Private Chat!',
     bot: 'Fitur Khusus Pengguna Nomor Bot',
