@@ -644,11 +644,6 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break
             case 'menu': {
                 m.reply('┌──⭓ *Search Menu*\n│\n│⭔ gimage [query]\n│⭔ pinterest [query]\n│⭔ wikimedia [query]\n│⭔ ringtone [query]\n│\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ coffe\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ togif\n│⭔ tourl\n│⭔ tovn\n│⭔ ebinary\n│⭔ dbinary\n│⭔ styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ addmsg\n│⭔ listmsg\n│⭔ getmsg\n│⭔ delmsg\n│\n└───────⭓')
-                m.reply('')
-            }
-            break
-         case 'me': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/3c1cbd98ef4b72b597949.mp4 }, caption: `*Premium Groups Bot:*\n🌟 Akses fitur groups\n🌟 Bisa masukan tiga groups sekaligus\n🌟 Bermain game bersama teman\n🌟 Akses semua fitur digroups\n\n💰 *Harga* : Rp.10.000/bulan\n\n🎁 Anti limit\n🎁 Bot tidak delay\n\nHappy Shopping!` }, { quoted: m })
             }
             break
             case 'chat': {
