@@ -626,24 +626,32 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
          case 'premium': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/1b720b61e6ccec3f68ef0.jpg' }, caption: `*Premium Groups Bot:*\n🌟 Akses fitur groups\n🌟 Bisa masukan tiga groups sekaligus\n🌟 Bermain game bersama teman\n🌟 Akses semua fitur digroups\n\n💰 *Harga* : Rp.10.000/bulan\n\n🎁 Anti limit\n🎁 Bot tidak delay\n\nHappy Shopping!` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/1b720b61e6ccec3f68ef0.jpg' }, caption: `*Premium Groups Bot:*\n🌟 Akses fitur groups\n🌟 Bisa masukan tiga groups sekaligus\n🌟 Bermain game bersama teman\n🌟 Akses semua fitur digroups\n\n💰 *Harga* : Rp.10.000/bulan\n\n🎁 Bot tidak delay\n\nHappy Shopping!` }, { quoted: m })
             }
             break
                 case 'assalamualaikum': case 'hai': case 'hi': case 'halo': case 'bot': case 'q': case 'w': case 'e': case 'r': case 't': case 'y': case 'u': case 'i': case 'o': case 'a': case 's': case 'd': case 'f': case 'g': case 'h': case 'j': case 'k': case 'l': case 'z': case 'x': case 'c': case 'v': case 'b': case 'n': case 'm': {
                 if (m.isGroup) throw ('Fitur tidak dapat digunakan di grup')
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/5e4c217b662e77fc9360d.jpg'}, caption: `⭔ Ketik : *menu* , untuk melihat fungsi bot\n⭔ Ketik : *premium* , untuk menjadi pengguna premium\n⭔ Ketik : *donasi* , untuk melakukan donasi\n⭔ Ketik : *owner* , untuk menghubungi owner bot\n⭔ Ketik : *spesial* , untuk membeli command atau perintah - tidak termasuk premium \n⭔ Ketik : *version* , untuk melihat versi bot dan kebijakan privasi` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph//file/5e4c217b662e77fc9360d.jpg'}, caption: `⭔ Ketik : *menu* , untuk melihat fungsi bot\n⭔ Ketik : *premium* , untuk menjadi pengguna premium\n⭔ Ketik : *donasi* , untuk melakukan donasi\n⭔ Ketik : *owner* , untuk menghubungi owner bot\n⭔ Ketik : *spesial* , untuk membeli command atau perintah - tidak termasuk premium \n⭔ Ketik : *version* , untuk melihat versi bot dan kebijakan privasi\n⭔ Ketik : *ujicoba* , untuk uji coba gratis premium selama 1 bulan ` }, { quoted: m })
                 }
             break
             case 'spesial': {
-                m.reply('┌──⭓ *Voice Changer*\n│\n│⭔ bass\n│⭔ blown\n│⭔ deep\n│⭔ earrape\n│⭔ fast\n│⭔ fat\n│⭔ nightcore\n│⭔ reverse\n│⭔ robot\n│⭔ slow\n│⭔ tupai\n│\n└───────⭓\n\n💰Rp.1.000/bulan\n\njika kamu ingin membeli perintah ini, bisa langsung hubungi*owner*')
+                m.reply('┌──⭓ *Voice Changer*\n│\n│⭔ bass\n│⭔ blown\n│⭔ deep\n│⭔ earrape\n│⭔ fast\n│⭔ fat\n│⭔ nightcore\n│⭔ reverse\n│⭔ robot\n│⭔ slow\n│⭔ tupai\n│\n└───────⭓\n\n💰Rp.1.000/bulan\n\njika kamu ingin membeli perintah ini, bisa langsung hubungi *owner*')
             }
             break
             case 'version': {
                 m.reply('Bot Version : *v25.03.23*\n\nBot tidak dikelola oleh WhatsApp\n\nSelain bot kami sendiri, tidak ada bot lain atau pengembang BOT pihak ketiga yang berafiliasi dengan whatsaap.Mereka sepenuhnya independen dari kita.Mereka harus meminta Izin Team sebelum mengakses data Anda , Baru tersedia untuk mereka.')
             }
             break
+            case 'ujicoba': {
+                m.reply('mau uji coba gratis premium? kamu dapat kesempatan untuk mendapatkan uji coba gratis premium selama satu bulan!\n\n jika kamu ingin coba gratis silahkan hubungi *owner* pilih salah satu premium untuk uji coba gratis\n\n ada beberapa premium yang ingin di uji coba gratis\n\nhttps://wa.me/6285894831504')
+            }
+            break
+            case 'limit': {
+                m.reply('*Limit Awal:* 25 [Free]\n*Buy Limit:* Infinity [Buy]\n*Harga:* Rp.1.000\n\nKamu ingin membeli limit? silahkan hubungi *owner* dijamin limit selamanya tak terbatas)
+            }
+            break
             case 'menu': {
-                m.reply('┌──⭓ *Search Menu*\n│\n│⭔ gimage [query]\n│⭔ pinterest [query]\n│⭔ wikimedia [query]\n│⭔ ringtone [query]\n│\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ coffe\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ togif\n│⭔ tourl\n│⭔ tovn\n│⭔ ebinary\n│⭔ dbinary\n│⭔ styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ addmsg\n│⭔ listmsg\n│⭔ getmsg\n│⭔ delmsg\n│\n└───────⭓')
+                m.reply('┌──⭓ *Search Menu*\n│\n│⭔ pinterest [query]\n│⭔ wikimedia [query]\n│⭔ ringtone [query]\n│\n└───────⭓\n\n┌──⭓ *Fun Menu*\n│\n│⭔ coffe\n│⭔ simih\n│⭔ halah\n│⭔ hilih\n│⭔ huluh\n│⭔ heleh\n│⭔ holoh\n│\n└───────⭓\n\n┌──⭓ *Primbon Menu*\n│\n│⭔ nomorhoki\n│⭔ artimimpi\n│⭔ artinama\n│⭔ ramaljodoh\n│⭔ ramaljodohbali\n│⭔ suamiistri\n│⭔ ramalcinta\n│⭔ cocoknama\n│⭔ pasangan\n│⭔ jadiannikah\n│⭔ sifatusaha\n│⭔ rezeki\n│⭔ pekerjaan\n│⭔ nasib\n│⭔ penyakit\n│⭔ tarot\n│⭔ fengshui\n│⭔ haribaik\n│⭔ harisangar\n│⭔ harisial\n│⭔ nagahari\n│⭔ arahrezeki\n│⭔ peruntungan\n│⭔ weton\n│⭔ karakter\n│⭔ keberuntungan\n│⭔ memancing\n│⭔ masasubur\n│⭔ zodiak\n│⭔ shio\n│\n└───────⭓\n\n┌──⭓ *Convert Menu*\n│\n│⭔ toimage\n│⭔ sticker\n│⭔ emojimix\n│⭔ togif\n│⭔ tourl\n│⭔ tovn\n│⭔ ebinary\n│⭔ styletext\n│\n└───────⭓\n\n┌──⭓ *Main Menu*\n│\n│⭔ ping\n│⭔ owner\n│⭔ menu\n│⭔ delete\n│⭔ quoted\n│⭔ speedtest\n│\n└───────⭓\n\n┌──⭓ *Database Menu*\n│\n│⭔ addmsg\n│⭔ listmsg\n│⭔ getmsg\n│⭔ delmsg\n│\n└───────⭓\n\nKetik salah satu untuk menggunakannya\nContoh : Ketik *sticker*\nBelum Jelas? Silahkan Hubungi Owner')
             }
             break
             case 'chat': {
@@ -1472,15 +1480,6 @@ break
             m.reply(eb)
         }
         break
-            case 'dbinary': {
-            if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-		    db.data.users[m.sender].limit -= 1 // -1 limit
-            if (!text) throw `Example : ${prefix + command} text`
-            let { dBinary } = require('./lib/binary')
-            let db = await dBinary(text)
-            m.reply(db)
-        }
-        break
             case 'emojimix': {
             if (!isPremium && global.db.data.users[m.sender].limit < 3) return m.reply(mess.endLimit) // respon ketika limit habis
 		    db.data.users[m.sender].limit -= 3 // -3 limit
@@ -2208,8 +2207,7 @@ case 'menfes': case 'menfess': {
 		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
                 try {
                 let set
-                if (!isPremium && global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-		        db.data.users[m.sender].limit -= 1 // -1 limit
+                if (!isPro) throw mess.voice
                 if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
                 if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
                 if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
@@ -2366,7 +2364,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 neww = performance.now()
                 oldd = performance.now()
                 respon = `
-*BottyCu - Pro!!!*🥀\n\n📡Ping: ${latensi.toFixed(4)} second\n⚡Pinger: ${oldd - neww} micro second\n☢️Runtime: ${runtime(process.uptime())} 
+📡 ${latensi.toFixed(4)} second\n⚡${oldd - neww} micro second\n☢️ ${runtime(process.uptime())} 
                 `.trim()
                 m.reply(respon)
             }
