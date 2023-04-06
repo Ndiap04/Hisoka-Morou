@@ -647,7 +647,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
             case 'limit': {
-                m.reply('*Limit Awal:* 25 [Free]\n*Buy Limit:* Infinity [Buy]\n*Harga:* Rp.1.000\n\nKamu ingin membeli limit? silahkan hubungi *owner* dijamin limit selamanya tak terbatas)
+                m.reply('*Limit Awal:* 25 [Free]\n*Buy Limit:* Infinity [Buy]\n*Harga:* Rp.1.000\n\nKamu ingin membeli limit? silahkan hubungi *owner* dijamin limit selamanya tak terbatas')
             }
             break
             case 'menu': {
