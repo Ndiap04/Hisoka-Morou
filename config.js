@@ -36,7 +36,7 @@ global.APIKeys = {
 // Other
 global.owner = ['6285894831504']
 global.ownernomer = ['6285313937918','6285894831504']
-global.pro = ['6285894831504']
+global.pro = ['6285894831504','6283875897482']
 global.premium = ['6285894831504']
 global.voice = ['6285894831504']
 global.packname = 'BottyCu-Bot'
